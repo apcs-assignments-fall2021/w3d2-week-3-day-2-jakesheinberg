@@ -7,13 +7,18 @@ public class MyMain {
     //     isLetter('?') => false
     //     isLetter('4') => false
     public static boolean isLetter(char c) {
-        // REPLACE WITH YOUR CODE HERE
-        return false;
+        if(c>=97 && c<=122){
+            return true;
+        }else if (c>=65 && c<= 90){
+        return true;
+    }else{
+            return false;
+        }
     }
 
     // This method is given two chars as input, c1 and c2
     // The method should print out the chars between c1 and c2
-    // You can assume that c2 will always come after c2
+    // You can assume that c2 will always come after c1
     // Ex. printChars('b', 'g') => 'b'
     //                             'c'
     //                             'd'
@@ -21,7 +26,11 @@ public class MyMain {
     //                             'f'
     //                             'g'
     public static void printChars(char c1, char c2) {
-        // REPLACE WITH YOUR CODE HERE
+        for(int x=c1; x<=c2; x++){
+            char y= (char) x;
+            System.out.println(y);
+
+        }
     }
 
     // Given a char ch, and returns the next letter in the alphabet.
@@ -34,7 +43,17 @@ public class MyMain {
     //     nextLetter('a') => 'b'
     //     nextLetter('z') => 'a'
     public static char nextLetter(char ch) {
-        // REPLACE WITH YOUR CODE HERE
+        if(ch==90){
+            System.out.println('A');
+        }else if(ch==122){
+            System.out.println('a');
+        }else {
+            int nextInt = ch + 1;
+            char nextChar = (char) nextInt;
+            System.out.println(nextChar);
+        }
+
+
         return ' ';
     }
 
